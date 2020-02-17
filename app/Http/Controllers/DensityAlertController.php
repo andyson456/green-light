@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DensityAlert;
 use Illuminate\Http\Request;
 
 class DensityAlertController extends Controller

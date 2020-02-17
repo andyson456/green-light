@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\MasterResponse;
 use Illuminate\Http\Request;
 
 class MasterResponseController extends Controller
