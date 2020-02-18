@@ -31,7 +31,7 @@
                 {{($res['group'])}}
             </td>
             <td style="border: 1px solid #dddddd; padding: 8px">
-                <a href="addDevice" class="btn btn-xs btn-info pull-right">Add Device</a>
+                <a href="/master_responses/addDevice" class="btn btn-xs btn-info pull-right">Add Device</a>
             </td>
         </tr>
 

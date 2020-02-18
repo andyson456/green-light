@@ -15,8 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('get_master_responses', 'Controller@get_master_response');
-Route::get('get_device_alerts', 'Controller@get_device_alerts');
+Route::get('master_responses/get_master_responses', 'MasterResponseController@get_master_response');
+Route::get('device_alerts/get_device_alerts', 'DensityAlertController@get_device_alerts');
 Route::get('save_device_alerts', 'DensityAlertController@save');
 Route::get('save_master_responses', 'MasterResponseController@save');
-Route::get('addDevice', 'MasterResponseController@addDevice');
+
+Route::get('master_responses/addDevice', 'MasterResponseController@addDevice');

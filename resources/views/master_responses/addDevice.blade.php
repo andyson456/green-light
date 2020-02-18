@@ -2,9 +2,9 @@
 <html>
 <body>
 <h1>Add a device</h1>
-<h3>Add a device for: </h3>
 
-<form class="form-horizontal" method="POST" action="{{ url('/get_master_responses') }}">
+<form class="form-horizontal" method="POST" action="{{ url('/addDevice') }}">
+    {{ csrf_field() }}
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
     <div class="form-group">
         <label class="col-md-4 control-label">Device Name</label>

@@ -86,8 +86,8 @@
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
-                    <a href="/get_master_responses">Master Responses</a>
-                    <a href="/get_device_alerts">Alerts</a>
+                    <a href="/master_responses/get_master_responses">Master Responses</a>
+                    <a href="/device_alerts/get_device_alerts">Alerts</a>
                 </div>
             </div>
         </div>

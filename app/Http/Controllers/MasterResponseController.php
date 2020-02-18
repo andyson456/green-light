@@ -14,14 +14,38 @@ class MasterResponseController extends Controller
      */
     public function index()
     {
-        $masterResponses = MasterResponse::all();
-        return View::make('masterResponses.index')->with('masterResponses', $masterResponses);
+        //$masterResponses = MasterResponse::all();
+        //return View::make('masterResponses.index')->with('masterResponses', $masterResponses);
 
+    }
+
+    public function get_master_response(){
+
+        #$url = 'https://andrew.bartel:Deus3387@api.serverdensity.com/1.4/devices/list?account=deusmachine.serverdensity.com';
+        $url = 'https://api.serverdensity.io/inventory/devices?token=aee458c5604026187341113beac51261';
+        $handle = curl_init();
+        curl_setopt($handle, CURLOPT_URL, $url);
+        curl_setopt($handle, CURLOPT_USERAGENT, "SD_PHP_API_AW/1.0");
+        curl_setopt($handle, CURLOPT_HEADER, 0);
+        curl_setopt($handle, CURLOPT_RETURNTRANSFER, TRUE);
+        curl_setopt($handle, CURLOPT_TIMEOUT, 10);
+
+        $response = json_decode(curl_exec($handle), true);
+        if( curl_errno( $handle ) )
+        {
+            echo 'error:' . curl_error($handle);
+            die();
+        }
+        //return $response;
+
+        curl_close($handle);
+
+        return view('master_responses/get_master_responses',compact('$response', 'response'));
     }
 
     public function addDevice()
     {
-        return view('addDevice');
+        return view('master_responses/addDevice');
     }
 
 
