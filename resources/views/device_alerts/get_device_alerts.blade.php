@@ -7,7 +7,7 @@
 </style>
 <body>
 <h1>Server Density Alerts</h1>
-<a href="/get_master_responses">Master Response</a>
+<a href="{{ url('master_responses/get_master_responses') }}">Master Response</a>
 
 <table class="table" style="width: 100%">
     <tr>
@@ -17,22 +17,22 @@
         <th style="border: 1px solid #dddddd; padding: 8px">Master Response ID:</th>
         <th style="border: 1px solid #dddddd; padding: 8px">Alert Message:</th>
     </tr>
-    @foreach($alertResponse as $res)
+    @foreach($densityAlerts as $res)
         <tr>
             <td style="border: 1px solid #dddddd; padding: 8px">
-                {{($res['_id'])}}
+                {{($res->_id)}}
             </td>
             <td style="border: 1px solid #dddddd; padding: 8px">
-                {{($res['config']['open'])}}
+                {{($res->open)}}
             </td>
             <td style="border: 1px solid #dddddd; padding: 8px">
-                {{($res['updatedAt']['sec'])}}
+                {{($res->lastUpdated)}}
             </td>
             <td style="border: 1px solid #dddddd; padding: 8px">
-                {{($res['config']['subjectId'])}}
+                {{($res->master_response_id)}}
             </td>
             <td style="border: 1px solid #dddddd; padding: 8px">
-                {{($res['config']['fullName'])}}
+                {{($res->device_alert)}}
             </td>
         </tr>
 

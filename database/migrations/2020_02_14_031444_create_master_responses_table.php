@@ -18,6 +18,7 @@ class CreateMasterResponsesTable extends Migration
             $table->string('responseID');
             $table->string('name');
             $table->string('group');
+            $table->string('device_name');
             $table->timestamps();
         });
     }
