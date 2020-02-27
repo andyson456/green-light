@@ -26,6 +26,7 @@
 <a href="{{ url('master_responses/get_master_responses') }}">Master Response</a>
 
 <div id="dataTable">
+</div>
 
 <script>
     $(function() {
