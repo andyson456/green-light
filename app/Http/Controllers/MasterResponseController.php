@@ -66,18 +66,26 @@ class MasterResponseController extends Controller
     {
         $masterResponse = MasterResponse::find($id);
         return view('master_responses/edit')->with('masterResponse', $masterResponse);
+
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
+     * @throws \Illuminate\Validation\ValidationException
      */
-    public function update(MasterResponse $masterResponse)
+    public function update(Request $request, $id)
     {
-        //
+        $masterResponse = MasterResponse::find($id);
+        $masterResponse->device_name = $request->input('device_name');
+
+        $masterResponse->save();
+
+        return redirect('master_responses/get_master_responses')->with('success', 'Device name updated');
+
     }
 
     /**

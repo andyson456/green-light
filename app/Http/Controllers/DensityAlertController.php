@@ -19,7 +19,7 @@ class DensityAlertController extends Controller
 
     }
 
-    public function get_device_alerts( $device_id = NULL, $list = NULL )
+    public function get_device_alerts()
     {
         //return DensityAlert::all();
         $densityAlerts = DensityAlert::all();

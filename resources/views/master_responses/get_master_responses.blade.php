@@ -5,37 +5,52 @@
         background-color: #dddddd;
     }
 </style>
+<head>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <script
+        src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous">
+    </script>
+
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css" />
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js"></script>
+</head>
 <body>
 <h1>Server Density Master Response</h1>
 <a href="{{ url("device_alerts/get_device_alerts") }}">Alerts</a>
-<table class="table" style="width: 100%">
-    <tr>
-        <th style="border: 1px solid #dddddd; padding: 8px">Account ID:</th>
-        <th style="border: 1px solid #dddddd; padding: 8px">Name:</th>
-        <th style="border: 1px solid #dddddd; padding: 8px">Group:</th>
-        <th style="border: 1px solid #dddddd; padding: 8px">Device:</th>
-    </tr>
-    @foreach($masterResponses as $res)
-        <tr>
-            <td style="border: 1px solid #dddddd; padding: 8px">
-                {{($res->responseID)}}
-            </td>
-            <td style="border: 1px solid #dddddd; padding: 8px">
-                {{($res->name)}}
-            </td>
-            <td style="border: 1px solid #dddddd; padding: 8px">
-                {{($res->group)}}
-            </td>
-            <td style="border: 1px solid #dddddd; padding: 8px">
-                {{($res->device_name)}}
-            </td>
-            <td style="border: 1px solid #dddddd; padding: 8px">
-                <a href="/master_responses/{{$res->id}}/edit" class="btn btn-xs btn-info pull-right">Add Device</a>
-            </td>
-        </tr>
+<div id="dataTable">
 
-    @endforeach
+</div>
+<script>
+    $(function() {
+        $("#dataTable").jsGrid({
+            height: "90%",
+            width: "100%",
 
-</table>
+            sorting: true,
+            paging: true,
+
+            data: {!! $masterResponses !!},
+
+            fields: [
+                { name: "responseID", type: "text", width: 150 },
+                { name: "name", type: "text", width: 200 },
+                { name: "group", type: "text", width: 200 },
+                { name: "device_name", type: "text", valueField: "Id", textField: "Name" },
+                { type: "control", editButton: true, deleteButton: false, modeSwitchButton: false }
+            ],
+
+            rowClick: function(args) {
+                window.location.href=`/master_responses/${args.item.id}/edit`;
+            }
+        });
+    });
+</script>
 </body>
 </html>
