@@ -5,39 +5,48 @@
         background-color: #dddddd;
     }
 </style>
+<head>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <script
+        src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous">
+    </script>
+
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css" />
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js"></script>
+</head>
 <body>
 <h1>Server Density Alerts</h1>
 <a href="{{ url('master_responses/get_master_responses') }}">Master Response</a>
 
-<table class="table" style="width: 100%">
-    <tr>
-        <th style="border: 1px solid #dddddd; padding: 8px">ID:</th>
-        <th style="border: 1px solid #dddddd; padding: 8px">Open:</th>
-        <th style="border: 1px solid #dddddd; padding: 8px">Last Updated:</th>
-        <th style="border: 1px solid #dddddd; padding: 8px">Master Response ID:</th>
-        <th style="border: 1px solid #dddddd; padding: 8px">Alert Message:</th>
-    </tr>
-    @foreach($densityAlerts as $res)
-        <tr>
-            <td style="border: 1px solid #dddddd; padding: 8px">
-                {{($res->_id)}}
-            </td>
-            <td style="border: 1px solid #dddddd; padding: 8px">
-                {{($res->open)}}
-            </td>
-            <td style="border: 1px solid #dddddd; padding: 8px">
-                {{($res->lastUpdated)}}
-            </td>
-            <td style="border: 1px solid #dddddd; padding: 8px">
-                {{($res->master_response_id)}}
-            </td>
-            <td style="border: 1px solid #dddddd; padding: 8px">
-                {{($res->device_alert)}}
-            </td>
-        </tr>
+<div id="dataTable">
 
-    @endforeach
+<script>
+    $(function() {
+        $("#dataTable").jsGrid({
+            height: "90%",
+            width: "100%",
 
-</table>
+            sorting: true,
+            paging: true,
+
+            data: {!! $densityAlerts !!},
+
+            fields: [
+                {name: "_id", type: "text", width: 150},
+                {name: "open", type: "text", width: 200},
+                {name: "lastUpdated", type: "text", width: 200},
+                {name: "master_response_id", type: "text", valueField: "Id", textField: "Name"},
+                {name: "device_alert", type: "text"}
+            ],
+        });
+    });
+</script>
 </body>
 </html>
