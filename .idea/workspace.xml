@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f7189b7-64b2-4494-9a2f-340ecb371019" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/device_alerts/get_device_alerts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/device_alerts/get_device_alerts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/MasterResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/MasterResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/master_responses/get_master_responses.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/master_responses/get_master_responses.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +153,11 @@
       <workItem from="1582757071795" duration="2943000" />
       <workItem from="1582762710753" duration="508000" />
       <workItem from="1582763245065" duration="24000" />
-      <workItem from="1582763483214" duration="7476000" />
+      <workItem from="1582763483214" duration="8208000" />
+      <workItem from="1583539622495" duration="22000" />
+      <workItem from="1583540173576" duration="40000" />
+      <workItem from="1583540977942" duration="719000" />
+      <workItem from="1583542592970" duration="6344000" />
     </task>
     <servers />
   </component>
@@ -158,10 +165,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2663" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1582763264700">
+    <state x="2663" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1583542234518">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2663" y="310" width="424" height="484" key="FileChooserDialogImpl/1920.0.1920.1080/67.27.1853.1053@1920.0.1920.1080" timestamp="1582763264700" />
+    <state x="2663" y="310" width="424" height="484" key="FileChooserDialogImpl/1920.0.1920.1080/67.27.1853.1053@1920.0.1920.1080" timestamp="1583542234518" />
     <state x="2558" y="366" width="633" height="373" key="NewPhpClassDialog" timestamp="1582274634722">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -170,10 +177,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2369" y="187" key="SettingsEditor/1920.0.1920.1080/67.27.1853.1053@1920.0.1920.1080" timestamp="1582267037658" />
-    <state x="2536" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1582763249383">
+    <state x="2536" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1583540175028">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2536" y="380" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/67.27.1853.1053@1920.0.1920.1080" timestamp="1582763249383" />
+    <state x="2536" y="380" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/67.27.1853.1053@1920.0.1920.1080" timestamp="1583540175028" />
     <state x="2543" y="257" key="search.everywhere.popup" timestamp="1582266849801">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>

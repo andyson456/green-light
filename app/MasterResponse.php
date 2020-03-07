@@ -9,4 +9,10 @@ class MasterResponse extends Model
     protected $fillable = [
         'responseID', 'name', 'group', 'device_name'
     ];
+
+    public function whoToAlerts()
+    {
+        return $this->hasMany('App\WhoToAlert');
+    }
+
 }
