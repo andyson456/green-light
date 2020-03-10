@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f7189b7-64b2-4494-9a2f-340ecb371019" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/InternshipProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/InternshipProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/MasterResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/MasterResponse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/master_responses/get_master_responses.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/master_responses/get_master_responses.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MasterResponseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MasterResponseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +22,20 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -109,6 +128,11 @@
       <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
       <path value="$PROJECT_DIR$/vendor/phar-io/version" />
       <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XmRpTGHy6pdkvvHM9Nuj2fKHDO" />
@@ -157,7 +181,9 @@
       <workItem from="1583539622495" duration="22000" />
       <workItem from="1583540173576" duration="40000" />
       <workItem from="1583540977942" duration="719000" />
-      <workItem from="1583542592970" duration="6344000" />
+      <workItem from="1583542592970" duration="7093000" />
+      <workItem from="1583764958768" duration="2423000" />
+      <workItem from="1583874960499" duration="8690000" />
     </task>
     <servers />
   </component>
@@ -165,6 +191,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2613" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1583877892546">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2613" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1080/67.27.1853.1053@1920.0.1920.1080" timestamp="1583877892546" />
     <state x="2663" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1583542234518">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -177,13 +207,17 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2369" y="187" key="SettingsEditor/1920.0.1920.1080/67.27.1853.1053@1920.0.1920.1080" timestamp="1582267037658" />
-    <state x="2536" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1583540175028">
+    <state x="2536" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1583874961876">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2536" y="380" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/67.27.1853.1053@1920.0.1920.1080" timestamp="1583540175028" />
-    <state x="2543" y="257" key="search.everywhere.popup" timestamp="1582266849801">
+    <state x="2536" y="380" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/67.27.1853.1053@1920.0.1920.1080" timestamp="1583874961876" />
+    <state x="2573" y="161" width="709" height="867" key="find.popup" timestamp="1583882130753">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2543" y="257" key="search.everywhere.popup/1920.0.1920.1080/67.27.1853.1053@1920.0.1920.1080" timestamp="1582266849801" />
+    <state x="2573" y="161" width="709" height="867" key="find.popup/1920.0.1920.1080/67.27.1853.1053@1920.0.1920.1080" timestamp="1583882130753" />
+    <state x="2543" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1583881254238">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2543" y="257" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/67.27.1853.1053@1920.0.1920.1080" timestamp="1583881254238" />
   </component>
 </project>

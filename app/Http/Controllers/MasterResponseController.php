@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\MasterResponse;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
 class MasterResponseController extends Controller
@@ -130,6 +131,20 @@ class MasterResponseController extends Controller
         }
 
         die('Success!');
+    }
+
+    public function gitlabCallback(Request $request)
+    {
+        $query = $request->get("code");
+
+        $client = new Client([
+            'timeout'  => 2.0,
+        ]);
+
+        $handler = $client->post("http://gitlab.getfoundeugene.com/oauth/token?client_id=c68b38e2c326e748875783ba53dc64c4a366f48660dd94778d738591f159f25a&client_secret=188d39ac532b75e71a88eb54540fe26251e7f0b71793a37331da94e75067e289&code=".$request->query('code')."&grant_type=authorization_code&redirect_uri=https://tolocalhost.com/gitlab/callback");
+
+
+        return view('authRedirect')->with('gitlabResponseBody', $handler->getBody());
     }
 
 }

@@ -31,6 +31,8 @@ Route::post('who_to_alert/create', 'WhoToAlertController@store');
 Route::get('who_to_alert/{id}/edit', 'WhoToAlertController@edit');
 Route::patch('who_to_alert/{id}/index', 'WhoToAlertController@update');
 
+Route::get('gitlab/callback', 'MasterResponseController@gitlabCallback');
+
 
 //Route::resource('master_responses', 'MasterResponseController');
 
