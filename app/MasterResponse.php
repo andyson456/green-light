@@ -15,4 +15,10 @@ class MasterResponse extends Model
         return $this->hasMany('App\WhoToAlert');
     }
 
+    public function tickets()
+    {
+        return $this->hasMany('App\Ticket');
+    }
+
+
 }
