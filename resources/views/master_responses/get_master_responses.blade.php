@@ -30,6 +30,23 @@
         </div>
         <script>
             $(function() {
+                var ResponseTickets = function(config) {
+                    jsGrid.Field.call(this, config);
+                };
+
+                ResponseTickets.prototype = new jsGrid.Field(
+                    {
+                        itemTemplate: function(){
+                            return `<a href="{{ url('tickets/index') }}">Tickets</a>`;
+                        }
+
+                    }
+                );
+
+                jsGrid.fields.responseTickets = ResponseTickets;
+
+
+
                 $("#dataTable").jsGrid({
                     height: "90%",
                     width: "100%",
@@ -44,10 +61,11 @@
                     data: {!! $masterResponses !!},
 
                     fields: [
-                        { name: "responseID", type: "text", width: 150 },
+                        { name: "master_response_id", type: "text", width: 150 },
                         { name: "name", type: "text", width: 200 },
                         { name: "group", type: "text", width: 200 },
                         { name: "device_name", type: "text", valueField: "Id", textField: "Name" },
+                        { name: "tickets", type: "responseTickets", width: 80 },
                         { type: "control", editButton: true, deleteButton: false, modeSwitchButton: false }
                     ],
 

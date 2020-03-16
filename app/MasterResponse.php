@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class MasterResponse extends Model
 {
     protected $fillable = [
-        'responseID', 'name', 'group', 'device_name'
+        'master_response_id', 'name', 'group', 'device_name'
     ];
 
     public function whoToAlerts()

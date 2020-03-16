@@ -16,7 +16,6 @@
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css" />
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js"></script>
-
 </head>
 <body>
 <h1>Master Response Tickets</h1>
@@ -74,5 +73,7 @@
         window.location.href=gitlabUrl;
     }
 </script>
+
+
 </body>
 </html>

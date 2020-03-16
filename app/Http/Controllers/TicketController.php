@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\MasterResponse;
+use App\Ticket;
 use Illuminate\Http\Request;
 
 class TicketController extends Controller
@@ -13,7 +15,8 @@ class TicketController extends Controller
      */
     public function index()
     {
-        //
+        $userTickets = MasterResponse::find(1)->tickets;
+        return view('tickets/index')->with('userTickets', $userTickets);
     }
 
     /**
