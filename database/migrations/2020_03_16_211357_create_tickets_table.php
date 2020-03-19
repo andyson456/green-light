@@ -19,7 +19,6 @@ class CreateTicketsTable extends Migration
             $table->string('tech');
             $table->string('ticket');
             $table->string('note');
-            $table->string('category');
             $table->timestamps();
 
             $table->foreign('master_response_id')->references('id')->on('master_responses');

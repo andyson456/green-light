@@ -13,10 +13,10 @@ class TicketController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        $userTickets = MasterResponse::find(1)->tickets;
-        return view('tickets/index')->with('userTickets', $userTickets);
+        $userTickets = MasterResponse::find($id)->tickets;
+        return view('tickets/index')->with('userTickets', $userTickets)->with('ticketid', $id);
     }
 
     /**
@@ -24,9 +24,9 @@ class TicketController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        return view("tickets/create")->with('id', $id);
     }
 
     /**
@@ -37,7 +37,14 @@ class TicketController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $ticket = new Ticket();
+        $ticket->master_response_id = $request->input('idhidden');
+        $ticket->tech = $request->input('tech');
+        $ticket->ticket = $request->input('ticket');
+        $ticket->note = $request->input('note');
+        $ticket->save();
+
+        return redirect("tickets/{$ticket->master_response_id}/index")->with('success', 'Successfully created');
     }
 
     /**
@@ -59,7 +66,8 @@ class TicketController extends Controller
      */
     public function edit($id)
     {
-        //
+        $ticket = Ticket::find($id);
+        return view('tickets/edit')->with('ticket', $ticket)->with('id', $id);
     }
 
     /**
@@ -71,7 +79,14 @@ class TicketController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $ticket = Ticket::find($id);
+        $masterResponseId = $ticket->master_response_id;
+        $ticket->tech = $request->input('tech');
+        $ticket->ticket = $request->input('ticket');
+        $ticket->note = $request->input('note');
+        $ticket->save();
+
+        return redirect("tickets/$masterResponseId/index")->with('success', 'Successfully updated');
     }
 
     /**

@@ -36,10 +36,10 @@
 
                 ResponseTickets.prototype = new jsGrid.Field(
                     {
-                        itemTemplate: function(){
-                            return `<a href="{{ url('tickets/index') }}">Tickets</a>`;
+                        itemTemplate: function(value, item){
+                            console.dir({value, item});
+                            return `<a href='/tickets/${item.id}/index'>Tickets</a>`;
                         }
-
                     }
                 );
 

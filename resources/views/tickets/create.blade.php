@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Create User Device information</h2>
+
+<form action="{{ action('TicketController@store')}}" method="POST">
+    @csrf
+    @method('POST')
+    <input id="idhidden" name="idhidden" type="hidden" value={{$id}}>
+    <input id="tech" type="text" name="tech" placeholder="Tech Name">
+    <br>
+    <input id="ticket" type="text" name="ticket" placeholder="Ticket">
+    <br>
+    <input id="note" type="text" name="note" placeholder="Notes">
+    <br>
+    <br><br>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    var accessTokenString = localStorage.getItem("token");
+    var gitlabUrl = "http://gitlab.getfoundeugene.com/oauth/authorize?client_id=c68b38e2c326e748875783ba53dc64c4a366f48660dd94778d738591f159f25a&redirect_uri=https://tolocalhost.com/gitlab/callback&response_type=code&state=test&scope=read_user+openid";
+
+    if (!accessTokenString || accessTokenString.length === 0)
+    {
+        window.location.href=gitlabUrl;
+    }
+    try{
+        let fullResult = JSON.parse(accessTokenString);
+        if (!fullResult.access_token || fullResult.access_token.length === 0)
+        {
+            window.location.href=gitlabUrl;
+        }
+    } catch {
+        window.location.href=gitlabUrl;
+    }
+</script>
+
+</body>
+</html>

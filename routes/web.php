@@ -31,11 +31,11 @@ Route::post('who_to_alert/create', 'WhoToAlertController@store');
 Route::get('who_to_alert/{id}/edit', 'WhoToAlertController@edit');
 Route::patch('who_to_alert/{id}/index', 'WhoToAlertController@update');
 
-Route::get('tickets/index', 'TicketController@index');
+Route::get('tickets/{id}/index', 'TicketController@index');
 Route::get('tickets/{id}/create', 'TicketController@create');
 Route::post('tickets/create', 'TicketController@store');
 Route::get('tickets/{id}/edit', 'TicketController@edit');
-Route::patch('tickets/index', 'TicketController@update');
+Route::patch('tickets/{id}/index', 'TicketController@update');
 
 
 Route::get('gitlab/callback', 'MasterResponseController@gitlabCallback');

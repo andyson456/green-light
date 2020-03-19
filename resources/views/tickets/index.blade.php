@@ -21,6 +21,7 @@
 <h1>Master Response Tickets</h1>
 <a href="{{ url('/') }}">Home</a><br>
 <a href="{{ url('master_responses/get_master_responses') }}">Master Response</a><br><br>
+<a href="{{ url("tickets/{$ticketid}/create") }}">Create ticket information</a>
 
 <div id="dataTable">
 </div>
@@ -41,10 +42,9 @@
             data: {!! $userTickets !!},
 
             fields: [
-                { name: "tech", type: "text", width: 150 },
+                { name: "tech", type: "text", width: 100 },
                 { name: "ticket", type: "text", width: 100 },
-                { name: "note", type: "text", width: 100 },
-                { name: "category", type: "text", width: 100 },
+                { name: "note", type: "text", width: 200 },
                 { type: "control", editButton: true, deleteButton: false, modeSwitchButton: false },
             ],
 
